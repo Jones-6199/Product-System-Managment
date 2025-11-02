@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Product Sysyem Managment</title>
+  </head>
+  <body>
+    <div class="crud">
+      <div class="header">
+        <h3>crud</h3>
+        <p>product system managment</p>
+      </div>
+      <div class="inputs">
+        <input type="text" name="title" id="title" placeholder="Product title" />
+        <div class="prices">
+          <input onkeyup="getTotal()" type="number" id="price" placeholder="Product price" />
+          <input onkeyup="getTotal()" type="number" id="taxes" placeholder="Product taxes" />
+          <input onkeyup="getTotal()" type="number" id="ads" placeholder="Product ads" />
+          <input onkeyup="getTotal()" type="number" id="discount" placeholder="Product discount" />
+          <small id="total"></small>
+        </div>
+        <input type="text" name="count" id="count" placeholder="How much product you want to create" />
+        <input type="text" id="category" placeholder="Product category" />
+        <button type="submit" id="submit">Create</button>
+      </div>
+      <div class="outputs">
+        <input type="text" onkeyup="searchData(this.value)" name="search" id="search" placeholder="Search for your product" />
+        <div class="btn">
+          <button onclick="getSearchMood(this.id)" id="searchTitle">Search by title</button>
+          <button onclick="getSearchMood(this.id)" id="searchCategory">Search by category</button>
+        </div>
+      </div>
+      <div id="deleteAll">
+       
+      </div>
+      <table>
+        <tr>
+          <th>id</th>
+          <th>title</th>
+          <th>price</th>
+          <th>taxes</th>
+          <th>ads</th>
+          <th>discount</th>
+          <th>total</th>
+          <th>count</th> 
+          <th>category</th>
+          <th>update</th>
+          <th>delete</th>
+        </tr>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+
+
+
+    <script src="app.js"></script>
+  </body>
+</html>
